@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/desk.jpg">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>login page</title>
+</head>
+<body>
+  <div class="login-box">
+    <form action="#">
+      <h2>Login</h2>
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <input type="emal" name="userName" [(ngModel)]="loginobj.userName" required>
+        <label for="">Email</label>
+      </div>
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-lock"></i>
+        </span>
+        <input type="password" name="password" [(ngModel)]="loginobj.password" required>
+        
+        <label for="">password</label>
+      </div>
+      
+      <button type="submit" (click)="onlogin()">Login</button>
+      <div class="link">
+        <p>
+          Don't have an account?
+          <a href="#">Register</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

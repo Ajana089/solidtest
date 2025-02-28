@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lugrasimo&display=swap');
+
+html {
+  background-color: #eee;
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+/* This limits the width of the part of the page that contains the information, excluding the side navbar. */
+.page-info {
+  max-width: 900px;
+  box-shadow: 0 0 25px black;
+}
+
+body {
+  margin: 0;
+}
+
+/* This makes the entire page, including the navbar, a flex item, allowing both the navbar and the main page to display side-by-side and responsively resize. */
+main {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {  
+  display: flex;
+  margin: 0;
+  padding: 10px 20px 18px 20px;
+  max-width: 960px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5rem;
+  background-color: white;
+  background: linear-gradient(to right, rgba(19, 80, 88, 1), rgba(255, 255, 255, 0.8)), url("https://plus.unsplash.com/premium_photo-1685086785636-2a1a0e5b591f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: bottom;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+}
+
+
+/* This styles the notes on the page. */
+.note {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:normal;
+  color: white;
+  background-color: #135058;
+}
+
+/* The entire webpage is divided into sections containing specific information under each of the main headings. It adds a background image fixed. */
+.main-section {
+    margin-top: 0;
+    padding-bottom: 50px;
+    padding: 20px 50px;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.8)),
+    url("https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* This expands this smaller section to full viewport height so that the section starts at the top of the page when the appropriate navbar button is clicked. */
+#CSS_Comments {
+  height: 100vh;
+}
+
+/* The following 2 rules style the 'Example' boxes. Each has an orange outer main box and an inner white box. */
+.container-main {
+  color: #000;
+  width: 60%;
+  background-color: rgb(221, 157, 88);
+  border-radius: 10px;
+  padding: 10px 25px 25px;
+  margin: 40px auto;
+}
+
+.container-inner {
+  color: black;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+/* This sets the height of the navbar to ensure it spans the full height of the page and makes it sticky so that it doesn't move when scrolling. */
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 176px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, rgba(255,255,255, 0.1), rgba(255, 255, 255, 1)), url("https://img.freepik.com/free-vector/illustration-plant_53876-8447.jpg?t=st=1733503301~exp=1733506901~hmac=655e85885610ce62108b188dc621e76050bf53f0004fe84c8e6f3130a86dea5f&w=996");
+  background-position: center;
+  background-size: 500px 100vh;
+  background-position-x: 350px;
+  box-shadow: 0 0 25px 2px black;
+}
+
+/* This sets the height of the buttons. */
+.navbar, .nav-buttons {
+  line-height: 46px;
+  padding: 0;
+}
+
+/* This keeps the navbar buttons to the left. */
+.navbar ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* This styles the individual buttons, sets the width, and ensures that the text is centred and the bullet symbol is removed. */
+.navbar li {
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+  width: 176px;
+}
+
+/* This styles the nav-buttons. They are set to border-box to keep them within the width of the navbar. Margin-bottom spaces them horizontally in the navbar. A background blur is applied to each button. */
+.nav-buttons:nth-child(n+2) {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 70px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: 900;
+  border-radius: 100px 20px;
+  border: 3px double #135058;
+  box-shadow: 5px 10px 10px #135058;
+  backdrop-filter: blur(2px);
+}
+
+/* This adds height to the empty 'button' to bring the buttons in line with the background. */
+.navbar header {
+  height: 76px;
+}
+
+/* This gives the buttons an orange colour when each button is hovered over. */
+.navbar a:hover,
+.navbar a:focus {  
+  background-color: rgb(221, 157, 88);
+  border-radius: 100px 20px;
+  box-shadow: 5px 10px 10px rgb(118, 83, 45);
+  transition: background-color 0.5s;
+}
+
+
+/* This makes the anchor elements in the li elements a block element, ensuring that the entire background colour changes on hover. */
+li a {
+  display: block;
+}
+
+/* This removes the underline in the links and adds colour and weight to the text. */
+.navbar a {
+  text-decoration: none;
+  color: rgb(9, 19, 53);
+  font-weight: 900;
+}
+/* End of navbar. */
+
+h2 {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #135058;
+}
+
+.main-section header {
+  font-size: 1.6rem;
+  max-width:max-content;
+  padding: 5px 30px;
+  border-bottom: 3px solid #135058;
+  
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  background-color: rgb(221, 157, 88);
+  border-radius: 100px 20px;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+/* This spaces out the li elements in the body of the page to help with readability. It also changes the style of the bullets. */
+li {
+  line-height: 1.5rem;
+  margin: 20px 0;
+  list-style-type: "⬥ ";
+}
+
+/* This styles all the 'code' buttons in the text. */
+code {
+  background-color: rgb(211, 211, 211);
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 900;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0 3px;
+}
+
+footer {
+  display: flex;
+  
+  height: 75px;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.footer {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 718px) {
+
+  /* This stacks the elements on top of each other. */
+  main {
+  flex-direction: column;
+  }
+  
+  html {
+    background-color: #fff;
+  }
+
+  /* The following 2 rules set the appropriate space above the start of the sections so that the section header clears the navbar when the appropriate nav-button is clicked. */
+  .section-style-1 {
+    margin-top: 220px;
+  }
+
+  .section-style-2 {
+    margin-top: 248px;
+  }
+
+  /* This removes the CSS DOCUMENTATION header. */
+  h1 {
+   height: 0;
+   margin-left: -10000px;
+  }
+
+  /* This removes the empty navbar header. */
+  .navbar header {
+    height: 0;
+    border-bottom: none;
+  }
+
+  /* Among other things, this removes the background image from the navbar that would otherwise have remained in the main page. */
+  .navbar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  width: 100vw;
+  position: fixed;
+  background: none;
+  }
+
+  .navbar li {
+    width: 100vw;
+    font-size:x-large;
+  }
+
+  .nav-buttons:nth-child(n+2) {
+    margin-bottom: 0;
+    border-radius: 0;
+    background: linear-gradient(to right, rgba(19, 80, 88, 1), rgba(255, 255, 255, 0.8)), url("https://plus.unsplash.com/premium_photo-1685086785636-2a1a0e5b591f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: bottom;
+  border: 1px solid;
+  box-shadow: 0px 8px 18px #135058;
+  }
+
+  .navbar a:hover, .navbar a:focus {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0px 8px 8px rgb(118, 83, 45);
+    transition: background-color 0.75s;
+  }
+
+  /* This makes the font a little smaller in the now smaller 'Example' boxes*/
+  .container-main, .container-main code, .container-inner {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 464px) {
+  a {
+    font-size: small;
+  }
+  
+  .main-section header {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 406px) {
+  
+}

@@ -1,0 +1,18 @@
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">
+      Soil Testing
+    </a>
+    <a routerLink="user" class="list-group-item list-group-item-action">New users</a>
+    <a routerLink="sites" class="list-group-item list-group-item-action">sites</a>
+    <a routerLink="tests" class="list-group-item list-group-item-action">tests</a>
+    <a routerLink="test-types" class="list-group-item list-group-item-action">test types</a>
+    <a  class="list-group-item list-group-item-action disabled">login user:{{masterserv.loggeduserdata?.userName}}</a>
+
+  </div>
+
+  <button type="button" class="btn btn-dark" (click)="logout()">logout</button>
+  <div>
+    <router-outlet>
+        
+    </router-outlet>
+  </div>
